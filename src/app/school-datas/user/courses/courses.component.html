@@ -1,0 +1,121 @@
+<div class="container__wrapper">
+  <div
+    id="carouselExampleSlidesOnly"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="../../../../assets/images/graduation.jpg"
+          class="d-block w-100 image__style__container"
+          alt="graduation"
+        />
+        <div class="carousel-caption d-md-block">
+          <h3 style="color: black">
+            Educare Technology, No.1 Software Training Institute offers
+          </h3>
+          <marquee
+            style="color: black; font-size: 20px"
+            width="60%"
+            direction="left"
+            height="50px"
+          >
+            various Software Courses along with 100% Guaranteed Placement
+            assistance. We provide Big Data Training, Data Science, Python,Mean
+            Stack,Software Testing & many more
+          </marquee>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- discription section -->
+
+<div class="container course__discription__container">
+  <div class="course-sub__section">
+    <h1 class="sub__heading">Our 100% Job Oriented Programs</h1>
+    <p class="sub__section-discription">
+      We are focused on providing advanced level software training like Big Data
+      Training, Hadoop Training, Data Science Training, Python Training, Machine
+      Learning Training, Selenium Training in Cochin Kerala.
+    </p>
+  </div>
+</div>
+
+<!-- search field -->
+<div class="container search__wrapper">
+  <div class="input-group rounded course-search_container">
+    <input
+      [(ngModel)]="searchTerm"
+      type="search"
+      class="form-control rounded"
+      placeholder="Search your course"
+      aria-label="Search"
+      aria-describedby="search-addon"
+      style="height: 50px"
+    />
+    <div class="search__icon">
+      <span
+        style="background-color: transparent; font-size: 22px"
+        class="input-group-text border-0"
+        id="search-addon"
+      >
+        <i class="fas fa-search"></i>
+      </span>
+    </div>
+  </div>
+</div>
+<!-- card section(course discription) -->
+
+<div class="course-card__wrapper">
+  <div class="container course__card-container">
+    <!-- card 1 -->
+    <div
+      *ngFor="let i of allCourse | coursepipe : searchTerm : 'coursename'"
+      class="card card-style__contaniner"
+    >
+      <div class="course__image__style-container">
+        <img
+          style="height: 250px"
+          src="{{ i.image }}"
+          class="card-img-top"
+          alt="..."
+        />
+      </div>
+
+      <div class="card-body">
+        <h3 class="mb-5 text-danger">{{ i.coursename }}</h3>
+        <p class="card-text mb-4 course-discription__style">
+          {{ i.discription }}
+        </p>
+        <div class="course__schedule">
+          <h6 class="home__card-subtitle mb-2 text-muted">
+            <span class="text-danger">Next Batch</span> : {{ i.nextbatch }}
+            <br />
+          </h6>
+          <h6 class="card-text text-muted duration__Wrapper mt-2">
+            <span class="text-danger">Duration</span>:
+          </h6>
+          <h6>{{ i.duration }}</h6>
+
+          <h6 class="text-danger">Course Fee:</h6>
+          <h6>Fees (EMI Mode):{{ i.coursefeesoffline }}</h6>
+          <h6>Fees (One time Payment):{{ i.coursefeesonline }}</h6>
+        </div>
+        <a href="school/contact">
+          <button class="btn btn-success mt-3 mb-3 p-2 w-50">
+            ContactUs
+          </button></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer part -->
+
+<div class="container__course-footer__section">
+  <div class="course-footer__bottom__section"></div>
+</div>

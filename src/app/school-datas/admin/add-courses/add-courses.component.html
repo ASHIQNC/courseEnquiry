@@ -1,0 +1,157 @@
+<div class="add-course__form__Wrapper">
+  <div class="add-course__form__container">
+    <h1 class="text-center mt-5 mb-5 text-danger">ADD COURSE DETAILS</h1>
+    <form class="container" (ngSubmit)="addCourse()" [formGroup]="addFormData">
+      <!-- note:here we are conditionally checking using quetion mark whether the "acno" exist or not.if it exist its should validate the form using ts value -->
+
+      <div class="mb-4">
+        <input
+          formControlName="coursename"
+          style="height: 50px"
+          name="coursename"
+          type="text"
+          class="form-control"
+          id="coursename"
+          aria-describedby="usernamehelp"
+          placeholder="Enter course name"
+        />
+      </div>
+      <div
+        *ngIf="
+          addFormData.get('coursename')?.errors &&
+          addFormData.get('coursename')?.touched
+        "
+      >
+        <p class="text-danger">accept letters only</p>
+      </div>
+
+      <div class="mb-4">
+        <textarea
+          formControlName="discription"
+          name="city"
+          type="text"
+          class="form-control"
+          id="city"
+          cols="10"
+          rows="5"
+          placeholder="discription"
+        ></textarea>
+      </div>
+
+      <div
+        *ngIf="
+          addFormData.get('discription')?.errors &&
+          addFormData.get('discription')?.touched
+        "
+      >
+        <p class="text-danger">accept letters only</p>
+      </div>
+
+      <div class="mb-4">
+        <input
+          formControlName="image"
+          style="height: 50px"
+          name="imageurl"
+          type="text"
+          class="form-control"
+          id="imageurl"
+          placeholder="Paste image url"
+        />
+      </div>
+
+      <div
+        *ngIf="
+          addFormData.get('image')?.errors && addFormData.get('image')?.touched
+        "
+      >
+        <p class="text-danger">accept links only</p>
+      </div>
+
+      <div class="mb-4">
+        <input
+          formControlName="nextbatch"
+          style="height: 50px"
+          name="nextbatch"
+          type="text"
+          class="form-control"
+          id="nextbatch"
+          placeholder="next batch date"
+        />
+      </div>
+
+      <div
+        *ngIf="
+          addFormData.get('nextbatch')?.errors &&
+          addFormData.get('nextbatch')?.touched
+        "
+      >
+        <p class="text-danger">accept letters only</p>
+      </div>
+
+      <div class="mb-4">
+        <input
+          formControlName="duration"
+          style="height: 50px"
+          name="duration"
+          type="text"
+          class="form-control"
+          id="duration"
+          placeholder="Enter you duration"
+        />
+      </div>
+
+      <div
+        *ngIf="
+          addFormData.get('duration')?.errors &&
+          addFormData.get('duration')?.touched
+        "
+      >
+        <p class="text-danger">accept letters only</p>
+      </div>
+
+      <div class="mb-4">
+        <input
+          formControlName="coursefeesonline"
+          style="height: 50px"
+          name="emimode"
+          type="text"
+          class="form-control"
+          id="emimode"
+          placeholder="course fee (emimode)"
+        />
+      </div>
+
+      <div
+        *ngIf="
+          addFormData.get('coursefeesonline')?.errors &&
+          addFormData.get('coursefeesonline')?.touched
+        "
+      >
+        <p class="text-danger">accept numbers only</p>
+      </div>
+
+      <div class="mb-4">
+        <input
+          formControlName="coursefeesoffline"
+          style="height: 50px"
+          name="offlinefee"
+          type="text"
+          class="form-control"
+          id="offlinefee"
+          placeholder="course fee (onetime settlement) "
+        />
+      </div>
+
+      <div
+        *ngIf="
+          addFormData.get('coursefeesoffline')?.errors &&
+          addFormData.get('coursefeesoffline')?.touched
+        "
+      >
+        <p class="text-danger">accept numbers only</p>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

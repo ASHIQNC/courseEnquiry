@@ -1,0 +1,34 @@
+$medium: 600px;
+
+.navbar__content__wrapper {
+  justify-content: center;
+  .avatar__Wrapper {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.navbar__container {
+  background-color: white;
+}
+
+.navbar-header__style {
+  color: red;
+}
+
+.navbar-nav {
+  .nav-item {
+    .nav-link:hover {
+      color: red;
+    }
+  }
+}
+
+@media only screen and (max-width: $medium) {
+  .navbar__content__wrapper {
+    .avatar__Wrapper {
+      width: 20%;
+    }
+  }
+}
