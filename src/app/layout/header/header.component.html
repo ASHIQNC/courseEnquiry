@@ -35,7 +35,14 @@
           <a class="nav-link" routerLink="school/contact">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="school/addcourse">AddCourse</a>
+          <a class="nav-link" *ngIf="adminlogin" routerLink="school/addcourse"
+            >AddCourse</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="adminlogin" routerLink="school/enquiry"
+            >Enquiry</a
+          >
         </li>
       </ul>
       <!-- <form class="d-flex">
@@ -48,22 +55,80 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form> -->
       <div class="avatar__Wrapper">
-        <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <img
-            src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
-            class="rounded-circle shadow-4 me-3"
-            style="width: 50px"
-            alt="Avatar"
-          />
+        <a
+          class="btn btn-success"
+          style="text-decoration: none"
+          *ngIf="imgeoff"
+          href="school/login"
+        >
+          Login
         </a>
       </div>
+
+      <a
+        (click)="logoutData()"
+        class="btn btn-danger"
+        *ngIf="logout"
+        routerLink="school/enquiry"
+        >logout</a
+      >
     </div>
   </div>
 </nav>
 
 <!-- model for avatar -->
 
-<div
+<!-- <div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" style="margin-top: 170px" id="t1">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Profile Details</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="text-center" style="margin-bottom: 30px">
+          <img
+            src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
+            class="rounded-circle shadow-4 me-3"
+            style="width: 100px"
+            alt="user"
+          />
+        </div>
+
+        <div
+          class="mt-2"
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <h5 class="text-danger"><span>UserName</span>: Ashiq</h5>
+          <h5 class="text-danger"><span>Role</span>: Admin</h5>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div
   class="modal fade"
   id="exampleModal"
   tabindex="-1"
@@ -112,3 +177,24 @@
     </div>
   </div>
 </div>
+
+form -->
+<!-- <form action="" [formGroup]="loginData">
+  <label for="chk" aria-hidden="true">Login</label>
+
+  <input
+    formControlName="username"
+    type="text"
+    id="na"
+    name="username"
+    placeholder="Username"
+  />
+  <input
+    formControlName="password"
+    id="pa"
+    type="password"
+    name="password"
+    placeholder="password"
+  />
+  <button>Login</button>
+</form> -->

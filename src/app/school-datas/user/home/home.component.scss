@@ -51,6 +51,7 @@ $medium: 600px;
     height: 90vh;
     .home__content-left-section {
       width: 60%;
+
       .home__content-discription__section {
         width: 70%;
         display: flex;
@@ -63,6 +64,11 @@ $medium: 600px;
     }
     .home__content-right-section {
       width: 50%;
+      .cardtop__section-style {
+        background-color: #1974c269;
+        border-radius: 30px;
+        margin-bottom: 80px;
+      }
       .home__card__wrapper {
         width: 23rem;
         height: 73vh;
@@ -105,6 +111,7 @@ $medium: 600px;
       .course-right__section-content {
         width: 100%;
         display: flex;
+
         .course__card__wrapper {
           width: 22rem;
           height: 73vh;
@@ -112,6 +119,11 @@ $medium: 600px;
           margin-top: 20px;
           border: none;
           cursor: pointer;
+          .course__card-body {
+            background-color: #1974c269;
+            border-radius: 30px;
+          }
+
           .course__card-subtitle {
             margin-top: 33px;
             color: lightgray;
@@ -248,6 +260,8 @@ $medium: 600px;
     margin-top: 70px;
     .feed__top-section {
       width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
       .video__style {
         width: 345px;
         margin-left: 16px;
@@ -257,7 +271,7 @@ $medium: 600px;
       max-width: 88%;
       margin-left: 23px;
       margin-bottom: 10px;
-      margin-top: 32px;
+      margin-top: 75px;
     }
   }
 }

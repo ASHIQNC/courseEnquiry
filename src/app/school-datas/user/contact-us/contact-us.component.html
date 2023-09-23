@@ -1,25 +1,59 @@
 <div class="contact__container">
   <div class="contact__right-section">
-    <h1 class="contact-header__section">Contact Us</h1>
+    <h1 data-aos="fade-left" class="contact-header__section">Contact Us</h1>
     <div class="call-us__section">
       <div class="contact-us__wrapper">
         <div class="contact-us__wrapper__left-section">
-          <i class="fa-solid fa-phone" style="color: #ea1010"></i>
+          <i
+            data-aos="fade-left"
+            data-aos-delay="300"
+            class="fa-solid fa-phone"
+            style="color: #ea1010"
+          ></i>
         </div>
         <div class="contact-us__wrapper__right-section">
-          <h6 class="contact__sub-heading">Call us on:</h6>
-          <h6 style="color: lightgray">Call: +2874 653 678</h6>
+          <h6
+            data-aos="fade-right"
+            data-aos-delay="300"
+            class="contact__sub-heading"
+          >
+            Call us on:
+          </h6>
+          <h6
+            data-aos="fade-right"
+            data-aos-delay="400"
+            style="color: lightgray"
+          >
+            Call: +2874 653 678
+          </h6>
         </div>
       </div>
     </div>
     <div class="call-us__section">
       <div class="contact-us__wrapper">
         <div class="contact-us__wrapper__left-section">
-          <i class="fa-solid fa-envelope" style="color: #f10914"></i>
+          <i
+            data-aos="fade-left"
+            data-aos-delay="500"
+            class="fa-solid fa-envelope"
+            style="color: #f10914"
+          ></i>
         </div>
         <div class="contact-us__wrapper__right-section">
-          <h6 class="contact__sub-heading">Email us at:</h6>
-          <h6 style="color: lightgray">Enquiry: dummy@gmail.com</h6>
+          <h6
+            data-aos="fade-right"
+            data-aos-delay="500"
+            class="contact__sub-heading"
+          >
+            Email us at:
+          </h6>
+          <h6
+            data-aos="fade-right"
+            data-aos-delay="600"
+            style="color: lightgray"
+          >
+            Enquiry: dummy@gmail.com
+          </h6>
         </div>
       </div>
     </div>
@@ -27,11 +61,28 @@
     <div class="call-us__section">
       <div class="contact-us__wrapper">
         <div class="contact-us__wrapper__left-section">
-          <i class="fa-brands fa-whatsapp" style="color: #ed0c0c"></i>
+          <i
+            data-aos="fade-left"
+            data-aos-delay="700"
+            class="fa-brands fa-whatsapp"
+            style="color: #ed0c0c"
+          ></i>
         </div>
         <div class="contact-us__wrapper__right-section">
-          <h6 class="contact__sub-heading">Call us on:</h6>
-          <h6 style="color: lightgray">Whastup: +2874 653 678</h6>
+          <h6
+            data-aos="fade-right"
+            data-aos-delay="700"
+            class="contact__sub-heading"
+          >
+            Call us on:
+          </h6>
+          <h6
+            data-aos="fade-right"
+            data-aos-delay="800"
+            style="color: lightgray"
+          >
+            Whastup: +2874 653 678
+          </h6>
         </div>
       </div>
     </div>
@@ -39,16 +90,33 @@
     <div class="call-us__section">
       <div class="contact-us__wrapper">
         <div class="contact-us__wrapper__left-section">
-          <i class="fa-solid fa-phone" style="color: #ea1010"></i>
+          <i
+            data-aos="fade-left"
+            data-aos-delay="900"
+            class="fa-solid fa-phone"
+            style="color: #ea1010"
+          ></i>
         </div>
         <div class="contact-us__wrapper__right-section">
-          <h6 class="contact__sub-heading">Call us on:</h6>
-          <h6 style="color: lightgray">+2874 653 678</h6>
+          <h6
+            data-aos="fade-right"
+            data-aos-delay="900"
+            class="contact__sub-heading"
+          >
+            Call us on:
+          </h6>
+          <h6
+            data-aos="fade-right"
+            data-aos-delay="900"
+            style="color: lightgray"
+          >
+            +2874 653 678
+          </h6>
         </div>
       </div>
     </div>
   </div>
-  <div class="contact__left-section">
+  <div data-aos="fade-left" data-aos-delay="300" class="contact__left-section">
     <div class="contact__left-section__header">
       <h2 class="hidden__section">Contact Us</h2>
       <h2 class="contact__left-section__sub-headeing">
@@ -63,11 +131,16 @@
     <!-- form -->
     <div class="form__Wrapper">
       <div class="signup__form__container">
-        <form class="container signup__form__wrapper">
+        <form
+          class="container signup__form__wrapper"
+          (ngSubmit)="formDataSubmit()"
+          [formGroup]="contactFormData"
+        >
           <!-- note:here we are conditionally checking using quetion mark whether the "acno" exist or not.if it exist its should validate the form using ts value -->
 
           <div class="mb-4">
             <input
+              formControlName="username"
               style="height: 50px"
               name="username"
               type="text"
@@ -77,16 +150,17 @@
               placeholder="Enter your name"
             />
           </div>
-          <!-- <div
-      *ngIf="
-        signUpModelForm.get('uname')?.errors &&
-        signUpModelForm.get('uname')?.touched
-      "
-    >
-      <p class="text-danger">accept letters only</p>
-    </div> -->
+          <div
+            *ngIf="
+              contactFormData.get('username')?.errors &&
+              contactFormData.get('username')?.touched
+            "
+          >
+            <p class="text-danger">required</p>
+          </div>
           <div class="mb-4">
             <input
+              formControlName="phonenumber"
               style="height: 50px"
               name="number"
               type="text"
@@ -96,16 +170,17 @@
             />
           </div>
 
-          <!-- <div
-      *ngIf="
-        signUpModelForm.get('psw')?.errors &&
-        signUpModelForm.get('psw')?.touched
-      "
-    >
-      <p class="text-danger">accept letters and numbers only</p>
-    </div> -->
+          <div
+            *ngIf="
+              contactFormData.get('phonenumber')?.errors &&
+              contactFormData.get('phonenumber')?.touched
+            "
+          >
+            <p class="text-danger">accept numbers only</p>
+          </div>
           <div class="mb-4">
             <input
+              formControlName="email"
               style="height: 50px"
               name="email"
               type="email"
@@ -114,12 +189,18 @@
               placeholder="Enter you email address"
             />
           </div>
-          <!-- <div *ngIf="pswMatch">
-      <p class="text-danger">password doesn't match</p>
-    </div> -->
+          <div
+            *ngIf="
+              contactFormData.get('email')?.errors &&
+              contactFormData.get('email')?.touched
+            "
+          >
+            <p class="text-danger">required</p>
+          </div>
 
           <div class="mb-4">
             <input
+              formControlName="cityname"
               style="height: 50px"
               name="city"
               type="text"
@@ -129,8 +210,18 @@
             />
           </div>
 
+          <div
+            *ngIf="
+              contactFormData.get('cityname')?.errors &&
+              contactFormData.get('cityname')?.touched
+            "
+          >
+            <p class="text-danger">required</p>
+          </div>
+
           <div class="mb-4">
             <textarea
+              formControlName="enquiry"
               name="city"
               type="text"
               class="form-control"
@@ -139,6 +230,15 @@
               rows="5"
               placeholder="Enquiry/Message/Questions"
             ></textarea>
+          </div>
+
+          <div
+            *ngIf="
+              contactFormData.get('enquiry')?.errors &&
+              contactFormData.get('enquiry')?.touched
+            "
+          >
+            <p class="text-danger">accept letters only</p>
           </div>
 
           <button type="submit" class="btn btn-primary">Submit</button>

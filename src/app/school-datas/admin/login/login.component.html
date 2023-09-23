@@ -1,0 +1,123 @@
+<body>
+  <div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true" />
+    <div class="signup">
+      <form action="" [formGroup]="signupData">
+        <label for="chk" aria-hidden="true">Sign up</label>
+        <input
+          style="margin-top: -20px"
+          formControlName="username"
+          type="text"
+          name="txt"
+          placeholder="username"
+        />
+
+        <div
+          *ngIf="
+            signupData.get('username')?.errors &&
+            signupData.get('username')?.touched
+          "
+        >
+          <p style="text-align: center; font-weight: bold" class="text-danger">
+            accepts letter only
+          </p>
+        </div>
+        <input
+          formControlName="email"
+          type="email"
+          name="email"
+          placeholder="Email"
+        />
+
+        <div
+          *ngIf="
+            signupData.get('email')?.errors && signupData.get('email')?.touched
+          "
+        >
+          <p style="text-align: center; font-weight: bold" class="text-danger">
+            accepts letter only
+          </p>
+        </div>
+        <input
+          formControlName="password"
+          type="password"
+          name="pswd"
+          placeholder="password"
+        />
+
+        <div
+          *ngIf="
+            signupData.get('password')?.errors &&
+            signupData.get('password')?.touched
+          "
+        >
+          <p style="text-align: center; font-weight: bold" class="text-danger">
+            accepts letter and numbers only
+          </p>
+        </div>
+
+        <input
+          formControlName="role"
+          type="text"
+          name="role"
+          placeholder="role"
+        />
+
+        <div
+          *ngIf="
+            signupData.get('role')?.errors && signupData.get('role')?.touched
+          "
+        >
+          <p style="text-align: center; font-weight: bold" class="text-danger">
+            accepts letter only
+          </p>
+        </div>
+        <button type="submit" (click)="signup()">Sign up</button>
+      </form>
+    </div>
+
+    <!-- login -->
+    <div class="login">
+      <form action="" [formGroup]="loginData">
+        <label for="chk" aria-hidden="true">Login</label>
+
+        <input
+          formControlName="username"
+          type="text"
+          id="na"
+          name="username"
+          placeholder="Username"
+        />
+        <div
+          *ngIf="
+            loginData.get('username')?.errors &&
+            loginData.get('username')?.touched
+          "
+        >
+          <p style="text-align: center; font-weight: bold" class="text-danger">
+            accepts letter
+          </p>
+        </div>
+        <input
+          formControlName="password"
+          id="pa"
+          type="password"
+          name="password"
+          placeholder="password"
+        />
+
+        <div
+          *ngIf="
+            signupData.get('password')?.errors &&
+            signupData.get('password')?.touched
+          "
+        >
+          <p style="text-align: center; font-weight: bold" class="text-danger">
+            accepts letter and numbers only
+          </p>
+        </div>
+        <button (click)="login()">Login</button>
+      </form>
+    </div>
+  </div>
+</body>

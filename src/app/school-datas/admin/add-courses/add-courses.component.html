@@ -1,7 +1,19 @@
 <div class="add-course__form__Wrapper">
   <div class="add-course__form__container">
-    <h1 class="text-center mt-5 mb-5 text-danger">ADD COURSE DETAILS</h1>
-    <form class="container" (ngSubmit)="addCourse()" [formGroup]="addFormData">
+    <h1
+      data-aos="fade-right"
+      data-aos-delay="300"
+      class="text-center mt-5 mb-5 text-danger"
+    >
+      ADD COURSE DETAILS
+    </h1>
+    <form
+      data-aos="fade-left"
+      data-aos-delay="700"
+      class="container"
+      (ngSubmit)="addCourse()"
+      [formGroup]="addFormData"
+    >
       <!-- note:here we are conditionally checking using quetion mark whether the "acno" exist or not.if it exist its should validate the form using ts value -->
 
       <div class="mb-4">
@@ -34,7 +46,7 @@
           id="city"
           cols="10"
           rows="5"
-          placeholder="discription"
+          placeholder="description"
         ></textarea>
       </div>
 
@@ -96,7 +108,7 @@
           type="text"
           class="form-control"
           id="duration"
-          placeholder="Enter you duration"
+          placeholder="Enter your duration"
         />
       </div>
 
@@ -117,7 +129,7 @@
           type="text"
           class="form-control"
           id="emimode"
-          placeholder="course fee (emimode)"
+          placeholder="course fee (emi mode)"
         />
       </div>
 

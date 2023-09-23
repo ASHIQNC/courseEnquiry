@@ -7,6 +7,9 @@ import { PlacementComponent } from './user/placement/placement.component';
 import { AboutUsComponent } from './user/about-us/about-us.component';
 import { ContactUsComponent } from './user/contact-us/contact-us.component';
 import { AddCoursesComponent } from './admin/add-courses/add-courses.component';
+import { EnquiryComponent } from './admin/enquiry/enquiry.component';
+import { LoginComponent } from './admin/login/login.component';
+import { authGuard } from './shared/auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,7 +23,10 @@ const routes: Routes = [
   {
     path: 'addcourse',
     component: AddCoursesComponent,
+    canActivate: [authGuard],
   },
+  { path: 'enquiry', component: EnquiryComponent, canActivate: [authGuard] },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({

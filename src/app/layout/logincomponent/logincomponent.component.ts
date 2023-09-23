@@ -4,11 +4,11 @@ import { Router } from '@angular/router';
 import { CourseService } from 'src/app/school-datas/service/course.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  selector: 'app-logincomponent',
+  templateUrl: './logincomponent.component.html',
+  styleUrls: ['./logincomponent.component.scss'],
 })
-export class LoginComponent implements OnInit {
+export class LogincomponentComponent implements OnInit {
   constructor(
     private ps: CourseService,
     private route: Router,

@@ -35,8 +35,10 @@
 
 <div class="container course__discription__container">
   <div class="course-sub__section">
-    <h1 class="sub__heading">Our 100% Job Oriented Programs</h1>
-    <p class="sub__section-discription">
+    <h1 data-aos="fade-up" class="sub__heading">
+      Our 100% Job Oriented Programs
+    </h1>
+    <p data-aos="fade-up" data-aos-delay="300" class="sub__section-discription">
       We are focused on providing advanced level software training like Big Data
       Training, Hadoop Training, Data Science Training, Python Training, Machine
       Learning Training, Selenium Training in Cochin Kerala.
@@ -45,7 +47,7 @@
 </div>
 
 <!-- search field -->
-<div class="container search__wrapper">
+<div data-aos="fade-up" data-aos-delay="400" class="container search__wrapper">
   <div class="input-group rounded course-search_container">
     <input
       [(ngModel)]="searchTerm"
@@ -73,6 +75,8 @@
   <div class="container course__card-container">
     <!-- card 1 -->
     <div
+      data-aos="zoom-in-down"
+      data-aos-delay="500"
       *ngFor="let i of allCourse | coursepipe : searchTerm : 'coursename'"
       class="card card-style__contaniner"
     >
@@ -86,11 +90,19 @@
       </div>
 
       <div class="card-body">
-        <h3 class="mb-5 text-danger">{{ i.coursename }}</h3>
-        <p class="card-text mb-4 course-discription__style">
-          {{ i.discription }}
-        </p>
-        <div class="course__schedule">
+        <h3 style="min-height: 100px" class="text-danger">
+          {{ i.coursename }}
+        </h3>
+        <div>
+          <p
+            style="min-height: 150px"
+            class="card-text mb-4 course-discription__style"
+          >
+            {{ i.discription }}
+          </p>
+        </div>
+
+        <div style="min-height: 235px" class="course__schedule">
           <h6 class="home__card-subtitle mb-2 text-muted">
             <span class="text-danger">Next Batch</span> : {{ i.nextbatch }}
             <br />
@@ -104,10 +116,8 @@
           <h6>Fees (EMI Mode):{{ i.coursefeesoffline }}</h6>
           <h6>Fees (One time Payment):{{ i.coursefeesonline }}</h6>
         </div>
-        <a href="school/contact">
-          <button class="btn btn-success mt-3 mb-3 p-2 w-50">
-            ContactUs
-          </button></a
+        <a href="https://spectacular-pika-b47eea.netlify.app/" target="_blank">
+          <button class="btn btn-success mt-3 mb-3 p-2 w-50">PayNow</button></a
         >
       </div>
     </div>

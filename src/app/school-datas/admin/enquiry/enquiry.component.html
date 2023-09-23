@@ -1,0 +1,36 @@
+<h1
+  data-aos="fade-right"
+  data-aos-delay="300"
+  class="text-center mt-5 text-danger"
+>
+  ENQUIRY DETAILS
+</h1>
+
+<div class="enquiry__section-wrapper container">
+  <div class="enquiry-right__section">
+    <div class="enquiry__table__wrapper table-responsive">
+      <table style="overflow-x: hidden" class="table table-bordered">
+        <thead class="table-primary">
+          <tr class="table__header">
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">CityName</th>
+            <th scope="col">Courseconcern</th>
+          </tr>
+        </thead>
+        <!-- evide nammal iterate cheyyan vendi ngFor aanu use aaakunnee -->
+        <tbody>
+          <!-- |pipename:'eath tearm vechan search cheyunne':'eath filed name vechaan search cheyunne'  -->
+          <tr *ngFor="let i of enquiryData">
+            <th scope="row">{{ i.username }}</th>
+            <td>{{ i.email }}</td>
+            <td>{{ i.phonenumber }}</td>
+            <td>{{ i.cityname }}</td>
+            <td>{{ i.enquiry }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

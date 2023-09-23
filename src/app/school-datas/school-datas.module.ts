@@ -15,6 +15,8 @@ import { AddCoursesComponent } from './admin/add-courses/add-courses.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CoursepipePipe } from './coursePipe/coursepipe.pipe';
 import { FormsModule } from '@angular/forms';
+import { EnquiryComponent } from './admin/enquiry/enquiry.component';
+import { LoginComponent } from './admin/login/login.component';
 @NgModule({
   declarations: [
     SchoolDatasComponent,
@@ -26,6 +28,8 @@ import { FormsModule } from '@angular/forms';
     CoursesComponent,
     AddCoursesComponent,
     CoursepipePipe,
+    EnquiryComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,

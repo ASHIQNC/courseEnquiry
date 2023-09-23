@@ -18,4 +18,45 @@ export class CourseService {
   getCourse() {
     return this.http.get('http://localhost:3000/courseadmin/getcourse');
   }
+
+  //post enquiry details
+  postEnquiry(body: any) {
+    return this.http.post(
+      'http://localhost:3000/courseadmin/postenquiry',
+      body
+    );
+  }
+
+  loginApi(username: any, password: any) {
+    const bodyData = {
+      username,
+      password,
+    };
+    return this.http.post('http://localhost:3000/courseadmin/login', bodyData);
+  }
+
+  //get enquirydata
+  getEnquiry() {
+    return this.http.get('http://localhost:3000/courseadmin/getenquiry');
+  }
+
+  //register
+  // method for sign up
+  signupApi(body: any) {
+    //namukk nammale body create cheyyanm enth data ano BE send aakunnath enn
+    // const bodyData = {
+    //   //enthano nammal BE koduthe same variable thanne use aakanam
+    //   //evide nammale key(BE variable) and value(FE variable) same name koduthath kond direct aayit thazhe kodutha pole kodukka
+
+    //   username,
+    //   password,
+    //   role,
+    //   email,
+    // };
+    //nammkk ee data  vere function akath use cheyyandath kond return keyword use aakanam
+    return this.http.post('http://localhost:3000/courseadmin/register', body);
+  }
+
+  //for authguardfirst we need to understand we logged in or not for that we are
+  //creaating a method here
 }
