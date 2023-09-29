@@ -117,7 +117,12 @@
           <h6>Fees (One time Payment):{{ i.coursefeesonline }}</h6>
         </div>
         <a href="https://spectacular-pika-b47eea.netlify.app/" target="_blank">
-          <button class="btn btn-success mt-3 mb-3 p-2 w-50">PayNow</button></a
+          <button
+            *ngIf="payButtonOff"
+            class="btn btn-success mt-3 mb-3 p-2 w-50"
+          >
+            PayNow
+          </button></a
         >
       </div>
     </div>
