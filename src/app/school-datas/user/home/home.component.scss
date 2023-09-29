@@ -159,17 +159,6 @@ $medium: 600px;
   }
 }
 
-// .footer__wrapper {
-//   display: flex;
-//   justify-content: center;
-//   height: 50px;
-//   background-color: whitesmoke;
-//   align-items: center;
-//   .footer__style {
-//     color: lightgray;
-//   }
-// }
-
 @media only screen and (max-width: $medium) {
   .banner__header {
     height: 50vh;
@@ -226,19 +215,6 @@ $medium: 600px;
     .course__left-section {
       display: none;
     }
-
-    // .course-right__section {
-    //   .course-right__section-content {
-    //     flex-direction: column;
-    //     .course__card__wrapper {
-    //       margin-left: 0px;
-    //       .course__card-body {
-    //         // margin-left: 4px;
-    //         // width: 22rem;
-    //       }
-    //     }
-    //   }
-    // }
 
     .course-right__section {
       .course-right__section-content {
