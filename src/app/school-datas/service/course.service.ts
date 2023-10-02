@@ -10,19 +10,24 @@ export class CourseService {
   //addcourse
 
   addCourse(body: any) {
-    return this.http.post('http://localhost:3000/courseadmin/addcourse', body);
+    return this.http.post(
+      'https://courseserver-rk6z.onrender.com/courseadmin/addcourse',
+      body
+    );
   }
 
   //get course
 
   getCourse() {
-    return this.http.get('http://localhost:3000/courseadmin/getcourse');
+    return this.http.get(
+      'https://courseserver-rk6z.onrender.com/courseadmin/getcourse'
+    );
   }
 
   //post enquiry details
   postEnquiry(body: any) {
     return this.http.post(
-      'http://localhost:3000/courseadmin/postenquiry',
+      'https://courseserver-rk6z.onrender.com/courseadmin/postenquiry',
       body
     );
   }
@@ -32,12 +37,17 @@ export class CourseService {
       username,
       password,
     };
-    return this.http.post('http://localhost:3000/courseadmin/login', bodyData);
+    return this.http.post(
+      'https://courseserver-rk6z.onrender.com/courseadmin/login',
+      bodyData
+    );
   }
 
   //get enquirydata
   getEnquiry() {
-    return this.http.get('http://localhost:3000/courseadmin/getenquiry');
+    return this.http.get(
+      'https://courseserver-rk6z.onrender.com/courseadmin/getenquiry'
+    );
   }
 
   //register
@@ -54,7 +64,10 @@ export class CourseService {
     //   email,
     // };
     //nammkk ee data  vere function akath use cheyyandath kond return keyword use aakanam
-    return this.http.post('http://localhost:3000/courseadmin/register', body);
+    return this.http.post(
+      'https://courseserver-rk6z.onrender.com/courseadmin/register',
+      body
+    );
   }
 
   //for authguardfirst we need to understand we logged in or not for that we are

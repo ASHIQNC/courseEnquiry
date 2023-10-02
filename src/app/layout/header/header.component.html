@@ -44,6 +44,24 @@
             >Enquiry</a
           >
         </li>
+
+        <li
+          class="btn btn-success"
+          style="text-decoration: none"
+          *ngIf="imgeoff"
+          routerLink="school/login"
+        >
+          Login
+        </li>
+
+        <li
+          (click)="logoutData()"
+          class="btn btn-danger"
+          *ngIf="logout"
+          routerLink="school/enquiry"
+        >
+          logout
+        </li>
       </ul>
       <!-- <form class="d-flex">
         <input
@@ -54,24 +72,6 @@
         />
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form> -->
-      <div class="avatar__Wrapper">
-        <a
-          class="btn btn-success"
-          style="text-decoration: none"
-          *ngIf="imgeoff"
-          href="school/login"
-        >
-          Login
-        </a>
-      </div>
-
-      <a
-        (click)="logoutData()"
-        class="btn btn-danger"
-        *ngIf="logout"
-        routerLink="school/enquiry"
-        >logout</a
-      >
     </div>
   </div>
 </nav>
