@@ -43,12 +43,14 @@ $medium: 600px;
 }
 
 .home__content-section {
-  height: 180vh;
+  // height: 180vh;
 
   .home__content-upper-section {
     width: 100%;
     display: flex;
-    height: 90vh;
+    margin-top: 30px;
+    // changes
+    // height: 90vh;
     .home__content-left-section {
       width: 60%;
 
@@ -67,7 +69,8 @@ $medium: 600px;
       .cardtop__section-style {
         background-color: #1974c269;
         border-radius: 30px;
-        margin-bottom: 80px;
+        //80
+        margin-bottom: 50px;
       }
       .home__card__wrapper {
         width: 23rem;
@@ -90,8 +93,8 @@ $medium: 600px;
 
   .home__course-section__wrapper {
     width: 100%;
-    height: 90vh;
-
+    // height: 90vh;
+    margin-bottom: 60px;
     display: flex;
     .course__left-section {
       height: inherit;
@@ -147,7 +150,8 @@ $medium: 600px;
   // margin-left: 21px;
 
   .feed__top-section {
-    width: 45%;
+    // width: 45%;
+    width: 52%;
     .video__style {
       width: 500px;
       border-radius: 10px;
@@ -155,7 +159,8 @@ $medium: 600px;
     }
   }
   .feed__top-section-right {
-    max-width: 40%;
+    // max-width: 40%;
+    max-width: 48%;
   }
 }
 
@@ -189,7 +194,8 @@ $medium: 600px;
     .home__content-upper-section {
       flex-direction: column;
       margin-top: 30px;
-      height: 91vh;
+      //changes
+      // height: 91vh;
       .home__content-left-section {
         width: 100%;
         display: flex;
@@ -204,7 +210,9 @@ $medium: 600px;
         width: 100%;
         .home__card__wrapper {
           width: 22rem;
-          height: 62vh;
+          height: 74vh;
+
+          margin-bottom: -43px;
           // margin-left: 15px;
         }
       }
@@ -233,7 +241,7 @@ $medium: 600px;
     flex-direction: column-reverse;
     margin-left: 0px;
     margin-bottom: 54px;
-    margin-top: 70px;
+    margin-top: 22px;
     .feed__top-section {
       width: 100%;
       margin-top: 20px;
@@ -247,7 +255,7 @@ $medium: 600px;
       max-width: 88%;
       margin-left: 23px;
       margin-bottom: 10px;
-      margin-top: 75px;
+      // margin-top: 75px;
     }
   }
 }

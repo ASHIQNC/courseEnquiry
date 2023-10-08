@@ -26,14 +26,16 @@ export class LoginComponent {
     username: ['', [Validators.required, Validators.pattern('[A-za-z]+')]],
     password: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9]+')]],
     email: ['', [Validators.required]],
-    role: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9]+')]],
+    // role: ['admin', [Validators.required, Validators.pattern('[a-zA-Z0-9]+')]],
   });
 
   login() {
     let path = this.loginData.value;
     let username = path.username;
     let password = path.password;
-    this.ps.loginApi(username, password).subscribe(
+    let convertedLowercase = username?.toLowerCase();
+    console.log('lower', convertedLowercase);
+    this.ps.loginApi(convertedLowercase, password).subscribe(
       (data: any) => {
         localStorage.setItem('admin', 'admin');
         alert('login success fully');
@@ -58,7 +60,7 @@ export class LoginComponent {
       username: path.username,
       email: path.email,
       password: path.password,
-      role: path.role,
+      role: 'admin',
     };
 
     if (this.signupData.valid) {
