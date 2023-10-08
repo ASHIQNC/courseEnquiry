@@ -57,7 +57,7 @@ export class LoginComponent {
     let path = this.signupData.value;
     //ee variable name namukk eshtamullath kodukkam
     let bodyData = {
-      username: path.username,
+      username: path.username?.toLowerCase(),
       email: path.email,
       password: path.password,
       role: 'admin',
