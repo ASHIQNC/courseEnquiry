@@ -33,7 +33,7 @@ export class LoginComponent {
     let path = this.loginData.value;
     let username = path.username;
     let password = path.password;
-    let convertedLowercase = username?.toLowerCase();
+    let convertedLowercase = username;
     console.log('lower', convertedLowercase);
     this.ps.loginApi(convertedLowercase, password).subscribe(
       (data: any) => {
@@ -45,7 +45,7 @@ export class LoginComponent {
         });
       },
       (response) => {
-        alert(response.error);
+        alert('password or username incorrect');
       }
     );
   }
@@ -57,7 +57,7 @@ export class LoginComponent {
     let path = this.signupData.value;
     //ee variable name namukk eshtamullath kodukkam
     let bodyData = {
-      username: path.username?.toLowerCase(),
+      username: path.username,
       email: path.email,
       password: path.password,
       role: 'admin',

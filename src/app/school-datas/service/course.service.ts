@@ -11,7 +11,7 @@ export class CourseService {
 
   addCourse(body: any) {
     return this.http.post(
-      'https://courseserver-rk6z.onrender.com/courseadmin/addcourse',
+      'https://schoolserver-yftz.onrender.com/courseadmin/addcourse',
       body
     );
   }
@@ -20,14 +20,14 @@ export class CourseService {
 
   getCourse() {
     return this.http.get(
-      'https://courseserver-rk6z.onrender.com/courseadmin/getcourse'
+      'https://schoolserver-yftz.onrender.com/courseadmin/getcourse'
     );
   }
 
   //post enquiry details
   postEnquiry(body: any) {
     return this.http.post(
-      'https://courseserver-rk6z.onrender.com/courseadmin/postenquiry',
+      'https://schoolserver-yftz.onrender.com/courseadmin/postenquiry',
       body
     );
   }
@@ -38,7 +38,7 @@ export class CourseService {
       password,
     };
     return this.http.post(
-      'https://courseserver-rk6z.onrender.com/courseadmin/login',
+      'https://schoolserver-yftz.onrender.com/courseadmin/login',
       bodyData
     );
   }
@@ -46,7 +46,7 @@ export class CourseService {
   //get enquirydata
   getEnquiry() {
     return this.http.get(
-      'https://courseserver-rk6z.onrender.com/courseadmin/getenquiry'
+      'https://schoolserver-yftz.onrender.com/courseadmin/getenquiry'
     );
   }
 
@@ -65,7 +65,7 @@ export class CourseService {
     // };
     //nammkk ee data  vere function akath use cheyyandath kond return keyword use aakanam
     return this.http.post(
-      'https://courseserver-rk6z.onrender.com/courseadmin/register',
+      'https://schoolserver-yftz.onrender.com/courseadmin/register',
       body
     );
   }
